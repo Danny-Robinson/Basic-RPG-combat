@@ -1,0 +1,4 @@
+.progress-bar-vertical {
+  transform: rotate(-90deg);
+  width: 200px;
+}

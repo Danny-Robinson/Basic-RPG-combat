@@ -2,9 +2,11 @@ import { combineReducers, createStore, applyMiddleware } from "redux";
 
 import { AppActions, CLEAR_STORE } from "./types";
 import * as combatantReducers from "../combatants/reducers";
+import * as panelReducers from "../central-panel/reducers";
 
 const appReducer = combineReducers({
   ...combatantReducers,
+  ...panelReducers,
 });
 
 export const rootReducer = (state: StoreState, action: AppActions) => {

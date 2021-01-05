@@ -1,3 +1,5 @@
+import { CentralPanelActionTypes } from "../central-panel/types";
+
 export const CLEAR_STORE = "CLEAR_STORE";
 export interface ClearStoreAction {
   type: typeof CLEAR_STORE;
@@ -5,4 +7,4 @@ export interface ClearStoreAction {
 
 export type GeneralStoreActions = ClearStoreAction;
 
-export type AppActions = GeneralStoreActions;
+export type AppActions = GeneralStoreActions | CentralPanelActionTypes;

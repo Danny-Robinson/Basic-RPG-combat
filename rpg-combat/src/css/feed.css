@@ -1,0 +1,15 @@
+.feed {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 200px;
+}
+
+/* Should be nested using SCSS*/
+.feed > .feed-items {
+  flex: 1;
+  height: 100%;
+  overflow: auto;
+  display: flex;
+  flex-direction: column-reverse;
+}

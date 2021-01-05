@@ -1,8 +1,10 @@
 import React from "react";
 
-import "../css/App.css";
+import "../css/index.css";
+import Panel from "./central-panel/panel";
 import Hunter from "./combatants/characters/hunter";
 import Terror from "./combatants/characters/terror";
+import { Characters } from "./combatants/contants";
 
 const App = () => (
   <div className="container-fluid">
@@ -12,7 +14,9 @@ const App = () => (
         <div className="col-sm">
           <Hunter />
         </div>
-        <div className="col-sm">col 2</div>
+        <div className="col-sm">
+          <Panel characters={[Characters.Hunter, Characters.EldritchTerror]} />
+        </div>
         <div className="col-sm">
           <Terror />
         </div>

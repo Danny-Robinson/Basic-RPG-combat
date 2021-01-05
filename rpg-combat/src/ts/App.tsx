@@ -1,8 +1,8 @@
 import React from "react";
 
 import "../css/App.css";
-import CharacterCard from "./combatants/character-card";
-import hunter from "../assets/hunter.jpg";
+import Hunter from "./combatants/characters/hunter";
+import Terror from "./combatants/characters/terror";
 
 const App = () => (
   <div className="container-fluid">
@@ -10,16 +10,11 @@ const App = () => (
     <div className="container-fluid text-center">
       <div className="row">
         <div className="col-sm">
-          <CharacterCard image={hunter} health={100} name="Player" />
+          <Hunter />
         </div>
         <div className="col-sm">col 2</div>
         <div className="col-sm">
-          <CharacterCard
-            image={hunter}
-            health={100}
-            name="Monster"
-            imageRight
-          />
+          <Terror />
         </div>
       </div>
     </div>

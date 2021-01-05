@@ -9,9 +9,11 @@ export const characterHealth = (
 ): CharacterHealth => {
   switch (action.type) {
     case DEAL_DAMAGE:
+      const health = state[action.character] - action.damage;
+
       return {
         ...state,
-        [action.character]: state[action.character] - action.damage,
+        [action.character]: health < 0 ? 0 : health,
       };
   }
   return state;

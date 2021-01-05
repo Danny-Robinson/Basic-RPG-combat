@@ -1,6 +1,12 @@
 import { defaultCharacterDice } from "../redux-common/default-store-state";
 import { AppActions } from "../redux-common/types";
-import { ASSIGN_DICE, CharacterDice, Feed, WRITE_TO_FEED } from "./types";
+import {
+  ASSIGN_DICE,
+  CharacterDice,
+  Feed,
+  TOGGLE_CAN_ATTACK,
+  WRITE_TO_FEED,
+} from "./types";
 
 export const feed = (state = [] as Feed, action: AppActions): Feed => {
   switch (action.type) {
@@ -24,4 +30,13 @@ export const characterDice = (
       return { ...state, [action.character]: action.dice };
   }
   return state;
+};
+
+export const canAttack = (state = true, action: AppActions): Boolean => {
+  switch (action.type) {
+    case TOGGLE_CAN_ATTACK:
+      return !state;
+    default:
+      return state;
+  }
 };

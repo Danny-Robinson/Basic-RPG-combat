@@ -5,5 +5,6 @@
 To run: 
 
 1. Clone the repo
-2. yarn
-3. yarn run start
+2. cd rpg-combat
+3. yarn
+4. yarn run start
